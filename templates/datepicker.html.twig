@@ -1,0 +1,31 @@
+{#
+  Renders the Nepali datepicker input widget.
+
+  Parameters:
+    name        (string)  — HTML input name attribute
+    value       (string)  — pre-selected value (AD date string "YYYY-MM-DD")
+    picker_type (string)  — 'ad' (default) or 'bs'
+    calendar_json_path (string|null) — override the default JSON URL
+    attr        (array)   — extra HTML attributes for the <input> element
+#}
+
+{% set _type = picker_type|default('ad') %}
+{% set _json_path = calendar_json_path|default(null) %}
+
+<div
+    data-controller="nepali-datepicker"
+    data-nepali-datepicker-picker-type-value="{{ _type }}"
+    {% if _json_path %}
+    data-nepali-datepicker-calendar-json-path-value="{{ _json_path }}"
+    {% endif %}
+>
+    <input
+        type="text"
+        name="{{ name|default('date') }}"
+        value="{{ value|default('') }}"
+        data-nepali-datepicker-target="input"
+        autocomplete="off"
+        readonly
+        {% for key, val in attr|default({}) %}{{ key }}="{{ val }}"{% endfor %}
+    />
+</div>
