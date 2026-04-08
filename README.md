@@ -1,5 +1,7 @@
 # NepaliCalendarBundle
 
+
+https://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@github.com/Fintech-Nepal/margin-lending.git
 A Symfony 6.4+ bundle that provides:
 
 - **`CalendarService`** — PHP Bikram Sambat (BS) ↔ Gregorian (AD) date conversion  
@@ -10,7 +12,7 @@ A Symfony 6.4+ bundle that provides:
 
 ## Requirements
 
-| Dependency            | Version    |
+| Dependency            | Versionhttps://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@github.com/Fintech-Nepal/margin-lending.git    |
 |-----------------------|------------|
 | PHP                   | ≥ 8.1      |
 | Symfony Framework     | ^6.4 / ^7  |
